@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="StyleDesign.css">
+    <title>Projets</title>
+    <link rel="stylesheet" href="StyleDesign.css"/>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Jura:wght@300&family=Press+Start+2P&family=Ruda&display=swap" rel="stylesheet">
+</head>
+<body>
+    <div class="cursor"></div>
+    <div class="cursor2"></div>
+
+    <script>
+        var cursor = document.querySelector('.cursor');
+var cursorinner = document.querySelector('.cursor2');
+var a = document.querySelectorAll('a');
+
+document.addEventListener('mousemove', function(e){
+  var x = e.clientX;
+  var y = e.clientY;
+  cursor.style.transform = `translate3d(calc(${e.clientX}px - 50%), calc(${e.clientY}px - 50%), 0)`
+});
+
+document.addEventListener('mousemove', function(e){
+  var x = e.clientX;
+  var y = e.clientY;
+  cursorinner.style.left = x + 'px';
+  cursorinner.style.top = y + 'px';
+});
+
+document.addEventListener('mousedown', function(){
+  cursor.classList.add('click');
+  cursorinner.classList.add('cursorinnerhover')
+});
+
+document.addEventListener('mouseup', function(){
+  cursor.classList.remove('click')
+  cursorinner.classList.remove('cursorinnerhover')
+});
+
+a.forEach(item => {
+  item.addEventListener('mouseover', () => {
+    cursor.classList.add('hover');
+  });
+  item.addEventListener('mouseleave', () => {
+    cursor.classList.remove('hover');
+  });
+})
+    </script>
+    <div class="d-flex flex-column justify-content-center w-100 h-100"> <!-- animation pour le background-->
+
+       
+                
+    </div>
+</div>
+</div>
+    <div class="barre">
+        <a href="index.html"><img class="logo" src="portfolio.svg"/></a>
+        <ul>
+            <li><a href="Hobbies.html">Interests</a></li>
+            <li><a href="Skills.html">Skills</a></li>
+            <li><a href="Formation.html">Formation</a></li>
+            <li><a href="contact.html">Contacts</a></li>
+        </ul>
+    </div>
+
+    <div class="content">
+        <div class="titre">
+          <h1>Projects</h1>
+        </div>
+
+        <h2>Logo for the MMI formation (march 2022)</h2>
+        <div class="rowR">
+            <p>A logo to represent my formation: the BUT MMI. I add it on some objects like a cap or a hoodie with photoshop.</p>
+            <img class="pages" src="hoodie.png" alt="">
+        </div>
+        <div class="rowR">
+            <img class="pages" src="coque.png" alt="">
+          <img class="pages" src="casquette.png" alt="">
+        </div>
+
+        <h2>Some design project that I made in school (2021, 2022)</h2>
+        <div class="rowL">
+          <img class="pages" src="iso.png" alt="">
+          <p>It's a pink isometric villa with garden that I have designed on Affinity designer.</p>
+        </div>
+        <div class="rowR">
+          <p>It's an old fake card making with photoshop and the picture of the man.</p>
+          <img class="pages" src="dameDeCoeur.png" alt="">
+        </div>
+        
+    
+</body>
+</html>

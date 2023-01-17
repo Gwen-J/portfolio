@@ -1,0 +1,120 @@
+<!DOCTYPE html>
+<html translate="no">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Projects</title>
+    <link rel="stylesheet" href="StyleAudiovisual.css"/>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Jura:wght@300&family=Press+Start+2P&family=Ruda&display=swap" rel="stylesheet">
+</head>
+<body>
+    <div class="cursor"></div>
+    <div class="cursor2"></div>
+
+    <script>
+        var cursor = document.querySelector('.cursor');
+var cursorinner = document.querySelector('.cursor2');
+var a = document.querySelectorAll('a');
+
+document.addEventListener('mousemove', function(e){
+  var x = e.clientX;
+  var y = e.clientY;
+  cursor.style.transform = `translate3d(calc(${e.clientX}px - 50%), calc(${e.clientY}px - 50%), 0)`
+});
+
+document.addEventListener('mousemove', function(e){
+  var x = e.clientX;
+  var y = e.clientY;
+  cursorinner.style.left = x + 'px';
+  cursorinner.style.top = y + 'px';
+});
+
+document.addEventListener('mousedown', function(){
+  cursor.classList.add('click');
+  cursorinner.classList.add('cursorinnerhover')
+});
+
+document.addEventListener('mouseup', function(){
+  cursor.classList.remove('click')
+  cursorinner.classList.remove('cursorinnerhover')
+});
+
+a.forEach(item => {
+  item.addEventListener('mouseover', () => {
+    cursor.classList.add('hover');
+  });
+  item.addEventListener('mouseleave', () => {
+    cursor.classList.remove('hover');
+  });
+})
+    </script>
+    <div class="d-flex flex-column justify-content-center w-100 h-100"> <!-- animation pour le background-->
+
+       
+                
+    </div>
+</div>
+</div>
+    <div class="barre">
+        <a href="index.html"><img class="logo" src="portfolio.svg"/></a>
+        <ul>
+            <li><a href="Hobbies.html">Interests</a></li>
+            <li><a href="Skills.html">Skills</a></li>
+            <li><a href="Formation.html">Formation</a></li>
+            <li><a href="contact.html">Contacts</a></li>
+        </ul>
+    </div>
+
+    <div class="content">
+        <div class="titre">
+          <h1>Projects</h1>
+        </div>
+
+        <h2>The student interview (December 2021)</h2>
+        <div class="rowR">
+            <p>During this project, we had to ask questions to focus on women in the digital domain. We had to shot and edit an interview of a student.</p>
+            <img class="pages" src="question1.png" alt="">
+        </div>
+        <div class="rowL">
+          <img class="pages" src="intro1.png" alt="">
+          <p>To make this video more dynamic, we added some cutting shot, a question template and an intro.</p>
+        </div>
+        <div class="rowR">
+            <img class="pages" src="planTete1.png" alt="">
+          <img class="pages" src="inser1.png" alt="">
+        </div>
+
+        <h2>The association member's interview (Febuary 2022)</h2>
+        <div class="rowL">
+          <img class="pages" src="planTete3.png" alt="">
+          <p>It's an interview of a member of the association named "ArmorScience" to promote their book. This interview was edited with the software "Premiere pro". It's a five minutes video.</p>
+        </div>
+        <div class="rowR">
+          <p>I was the cameraman and I have created the question template, the intro and outro template.</p>
+          <img class="pages" src="question2.png" alt="">
+        </div>
+        <div class="rowR">
+          <img class="pages" src="doubleplan.png" alt="">
+          <img class="pages" src="intro2.png" alt="">
+        </div>
+
+        <h2>The pencil's ad (May 2022)</h2>
+        <div class="rowR">
+            <p>It's an ad of one minute that I had to film and edit to promote a fictive luxury pencil on our own.</p>
+            <img class="pages" src="pub1.png" alt="">
+        </div>
+        <div class="rowR">
+          <img class="pages" src="pub2.png" alt="">
+          <img class="pages" src="pub3.png" alt="">
+        </div>
+        <div class="rowR">
+            <img class="pages" src="pub4.png" alt="">
+          <img class="pages" src="pub5.png" alt="">
+        </div>
+      </div>
+    
+</body>
+</html>
